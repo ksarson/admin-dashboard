@@ -16,9 +16,7 @@ ul {
     display: flex;
     flex-direction: column;
     font-size: 24px;
-    gap: 24px;
     list-style: none;
-    padding-left: 16px;
 
     > li {
         align-items: center;
@@ -80,6 +78,15 @@ dark gray - #1c1d25
 
     .option-text {
         padding-left: 24px;
+    }
+
+    .primary-options,
+    .account-options {
+        padding-left: 16px;
+
+        > ul > li {
+            margin-bottom: 24px;
+        }
     }
 }
 
@@ -224,7 +231,34 @@ dark gray - #1c1d25
         }
 
         > .announcement-list {
-            border: solid red 1px;
+            background-color: #f8f8f8;
+            border-radius: 12px;
+            box-shadow: 5px 5px 5px 2px rgba(36, 36, 36, 0.2);
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+
+            > li.announcement {
+                border-bottom: solid #cccccc 1px;
+                align-items: start;
+                display: flex;
+                flex: 1;
+                flex-direction: column;
+                justify-content: center;
+
+                > .announcement-heading {
+                    font-size: 18px;
+                    font-weight: 700;
+                }
+
+                > .announcement-body {
+                    font-size: 16px;
+                }
+            }
+
+            > li.announcement:last-child {
+                border-bottom: none;
+            }
         }
     }
 
